@@ -8,7 +8,7 @@
   background-attachment: fixed;
 }
 
-.page__rec {
+.header__rec {
   position: absolute;
   top: var(--side-padding);
   right: var(--side-padding);
@@ -18,18 +18,17 @@
   line-height: 26px;
 }
 
-.page__rec::before {
+.header__rec::before {
   content: "REC";
 }
 
-.page__rec::after {
+.header__rec::after {
   content: "";
   display: inline-block;
   width: 9px;
   height: 9px;
-  margin: -2px 9px auto 9px;
+  margin: auto 9px;
   border-radius: 50%;
-  vertical-align: middle;
   box-shadow: 0px 0px 4px 2px currentColor;
   background: currentColor;
 }
@@ -125,7 +124,7 @@
   margin-bottom: 20px;
 }
 
-.section_layout_cols3 {
+.section_layout_different {
   gap: 20px;
 }
 
@@ -148,12 +147,12 @@
   margin-top: 20px;
 }
 
-.par {
+.paragraph {
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
-.par:last-child {
+.paragraph:last-child {
   margin-bottom: 0;
 }
 
@@ -218,21 +217,21 @@
     margin: 60px 20px 80px;
   }
 
-  .section_layout_cols2 {
+  .section_layout_normal {
     grid-template-columns: 1fr 2fr;
     gap: 20px;
   }
 
-  .section_layout_cols2 .section__title {
+  .section_layout_normal .section__title {
     grid-row-start: 1;
     grid-row-end: -1;
   }
 
-  .section_layout_cols3 {
+  .section_layout_different {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .section_layout_cols3 .section__col {
+  .section_layout_different .section__col {
     grid-column: 1 / span 3;
   }
 
@@ -285,11 +284,11 @@
     margin: auto;
   }
 
-  .section_layout_cols3 .section__col {
+  .section_layout_different .section__col {
     grid-column: auto;
   }
 
-  .section_layout_cols3 .section__col:first-of-type {
+  .section_layout_different .section__col:first-of-type {
     grid-column-start: 1;
   }
 }
